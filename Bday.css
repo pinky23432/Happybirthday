@@ -1,0 +1,164 @@
+body {
+    margin: 0;
+    padding: 16px;
+    height:100vh;
+    background: #C8A2C8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.birthday_card {
+    position: relative;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transform: perspective(2500px);
+    transition: 4s;
+}
+
+.front_img {
+    width: 450px;
+    margin-right: -50px;
+    margin-left: -50px; 
+    margin-top: 100px;
+    position: relative; 
+}
+
+.inside_img {
+    width: 350px;
+    margin-right: -50px;
+    margin-left: -50px; 
+    margin-top: 100px;
+    position: relative; 
+}
+
+.birthday_card:hover .front_card{
+    transform: rotateY(-160deg); 
+} 
+.birthday_card:hover .front_text {
+    display: none;
+}
+.front_text, .inside_text{
+    color: #800000;
+    font-family: 'Brush Script MT', cursive;
+    font-size: 24px;
+}
+
+.front_card {
+    position: relative;
+    overflow: hidden;
+    transform-origin: left;
+    margin: 40px auto;
+    padding: 16px;
+    background-color: whitesmoke;
+    text-align: center;
+    box-shadow: 0 24px 40px -8px #ff1493;
+    width: 450px;
+    height: 800px;
+}
+.inside_card {
+    position: absolute;
+    overflow: hidden;
+    transform-origin: left;
+    margin: 40px auto;
+    padding: 16px;
+    background-color: whitesmoke;
+    text-align: center;
+    box-shadow: 0 24px 40px -8px #E6E6FA;
+    width: 450px;
+    height: 800px;
+    z-index:-1;
+    left:0;
+    top:0;
+
+}
+.birthday_card audio {
+    display: none;
+}
+
+.birthday_card:hover .front_img {
+    display: none;
+}
+.inside_card audio {
+    display: flex;
+    margin-left: 50px;
+    margin-right: 40px;
+}
+
+body {
+    margin: 0;
+    padding: 16px;
+    height: 100vh;
+    background: #C8A2C8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(100vh) scale(0.5);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-50vh) scale(1);
+        opacity: 0;
+    }
+}
+
+.hearts {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* To make sure they don't interfere with clicks */
+}
+
+.hearts span {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #ff69b4;
+    opacity: 0;
+    animation: float 10s infinite ease-in-out;
+    clip-path: polygon(50% 0%, 100% 35%, 85% 100%, 50% 85%, 15% 100%, 0% 35%);
+}
+
+/* Customize the sizes, positions, and delays of the hearts */
+.hearts span:nth-child(1) {
+    left: 10%;
+    animation-delay: 0s;
+    animation-duration: 10s;
+}
+
+.hearts span:nth-child(2) {
+    left: 30%;
+    animation-delay: 1s;
+    animation-duration: 10s;
+    background-color: #ff1493;
+}
+
+.hearts span:nth-child(3) {
+    left: 50%;
+    animation-delay: 2s;
+    animation-duration: 10s;
+}
+
+.hearts span:nth-child(4) {
+    left: 70%;
+    animation-delay: 5s;
+    animation-duration: 10s;
+    background-color: #db7093;
+}
+
+.hearts span:nth-child(5) {
+    left: 90%;
+    animation-delay: 7s;
+    animation-duration: 10s;
+    background-color: #ff6eb4;
+}
+
